@@ -31,3 +31,10 @@ class OrderRead(BaseModel):
     id: int
     order_number: OrderNumberStr
     total_cents: TotalCentsStr
+    customer_id: int
+
+class CustomerPatch(BaseModel):
+    id: Optional[int] = None
+    name: Optional[NameStr] = None
+    email: Optional[EmailStr] = None
+    customer_since: Optional[CustomerSinceStr] = None
